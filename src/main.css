@@ -3,6 +3,7 @@
 :root {
   --color-almost-white: hsl(36deg 100% 99%);
   --color-dark-space-blue: hsl(240deg 100% 5%);
+  --color-transparent-dark-space-blue: hsl(240deg 100% 5% / 50%);
   --color-gunmetal: hsl(236deg 13% 42%);
   --color-light-vermillion: hsl(5deg 85% 63%);
   --color-silver: hsl(233deg 8% 79%);
@@ -18,4 +19,8 @@ html {
 
 body {
   background-color: var(--color-almost-white);
+}
+
+.icons {
+  display: none;
 }

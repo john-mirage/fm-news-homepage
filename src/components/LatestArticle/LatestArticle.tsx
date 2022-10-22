@@ -1,7 +1,7 @@
 import classes from "./LatestArticle.module.css";
 
 const LatestArticle = () => {
-  return <div></div>;
+  return <li></li>;
 };
 
 export default LatestArticle;

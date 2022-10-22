@@ -2,6 +2,9 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  height: 5.25rem; /* 84px */
+  padding-left: 1rem; /* 16px */
+  padding-right: 1rem; /* 16px */
 }
 
 .title {
@@ -14,4 +17,25 @@
   clip: rect(0, 0, 0, 0);
   white-space: nowrap;
   border-width: 0;
+}
+
+.logo {
+  width: 2.875rem; /* 46px */
+  height: 1.75rem; /* 28px */
+}
+
+.button {
+  position: relative;
+  z-index: 100;
+  margin-right: -0.25rem; /* -4px */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 3rem; /* 48px */
+  height: 3rem; /* 48px */
+}
+
+.buttonIcon {
+  width: 2.5rem; /* 40px */
+  height: 2.5rem; /* 40px */
 }

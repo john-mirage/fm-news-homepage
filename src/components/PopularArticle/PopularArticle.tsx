@@ -1,7 +1,7 @@
 import classes from "./PopularArticle.module.css";
 
 const PopularArticle = () => {
-  return <div></div>;
+  return <li></li>;
 };
 
 export default PopularArticle;
