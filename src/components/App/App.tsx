@@ -4,12 +4,18 @@ import LatestArticleList from "@components/LatestArticleList";
 import Overlay from "@components/Overlay";
 import PopularArticleList from "@components/PopularArticleList";
 import Sidebar from "@components/Sidebar";
-import { useState } from "react";
-import classes from "./App.module.css";
 import { AnimatePresence, MotionConfig } from "framer-motion";
+import { useEffect, useRef, useState } from "react";
+import classes from "./App.module.css";
 
 const App = () => {
-  const [sidebarIsOpen, setSidebarIsOpen] = useState<boolean>(false);
+  const [sidebarIsOpen, _setSidebarIsOpen] = useState<boolean>(false);
+  const sidebarIsOpenRef = useRef<boolean>(false);
+
+  const setSidebarIsOpen = (state: boolean) => {
+    sidebarIsOpenRef.current = state;
+    _setSidebarIsOpen(state);
+  };
 
   const openSidebar = () => {
     if (!sidebarIsOpen) setSidebarIsOpen(true);
@@ -18,6 +24,20 @@ const App = () => {
   const closeSidebar = () => {
     if (sidebarIsOpen) setSidebarIsOpen(false);
   };
+
+  const handleResize = () => {
+    const isDesktop = window.matchMedia("(min-width: 768px)").matches;
+    if (isDesktop && sidebarIsOpenRef.current) {
+      setSidebarIsOpen(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   return (
     <MotionConfig reducedMotion="user">

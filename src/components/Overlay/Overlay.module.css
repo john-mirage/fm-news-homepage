@@ -10,9 +10,3 @@
   justify-content: flex-end;
   background-color: var(--color-transparent-dark-space-blue);
 }
-
-@media screen and (min-width: 768px) {
-  .container {
-    display: none;
-  }
-}
