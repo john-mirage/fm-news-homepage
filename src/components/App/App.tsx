@@ -7,6 +7,7 @@ import Sidebar from "@components/Sidebar";
 import { AnimatePresence, MotionConfig } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 import classes from "./App.module.css";
+import { throttle } from "lodash";
 
 const App = () => {
   const [sidebarIsOpen, _setSidebarIsOpen] = useState<boolean>(false);
@@ -25,14 +26,13 @@ const App = () => {
     if (sidebarIsOpen) setSidebarIsOpen(false);
   };
 
-  const handleResize = () => {
-    const isDesktop = window.matchMedia("(min-width: 768px)").matches;
-    if (isDesktop && sidebarIsOpenRef.current) {
-      setSidebarIsOpen(false);
-    }
-  };
-
   useEffect(() => {
+    const handleResize = throttle(() => {
+      const isDesktop = window.matchMedia("(min-width: 768px)").matches;
+      if (isDesktop && sidebarIsOpenRef.current) {
+        setSidebarIsOpen(false);
+      }
+    }, 300);
     window.addEventListener("resize", handleResize);
     return () => {
       window.removeEventListener("resize", handleResize);
