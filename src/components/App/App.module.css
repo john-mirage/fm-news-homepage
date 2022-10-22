@@ -1,0 +1,13 @@
+.container {
+  display: flex;
+  background-blend-mode: color;
+}
+
+.title {
+  background-color: aliceblue;
+}
+
+.redTitle {
+  composes: title;
+  color: red;
+}
