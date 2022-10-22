@@ -31,6 +31,7 @@
 .link {
   display: block;
   font-weight: 400;
+  transition: color 150ms;
 }
 
 .columnList > .item > .link {
@@ -43,4 +44,10 @@
   font-size: 0.9375rem; /* 15px */
   line-height: 1.625rem; /* 26px */
   color: var(--color-gunmetal);
+}
+
+@media screen and (hover: hover) {
+  .list > .item > .link:hover {
+    color: var(--color-light-vermillion);
+  }
 }

@@ -5,4 +5,12 @@
   width: 3rem; /* 48px */
   height: 3rem; /* 48px */
   cursor: pointer;
+  color: var(--color-dark-space-blue);
+  transition: color 150ms;
+}
+
+@media screen and (hover: hover) {
+  .container:hover {
+    color: var(--color-light-vermillion);
+  }
 }

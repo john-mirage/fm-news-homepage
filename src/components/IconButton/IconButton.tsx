@@ -23,7 +23,12 @@ const IconButton = ({
       aria-label={label}
       onClick={onClick}
     >
-      <svg className={classes.icon} width={iconSize} height={iconSize}>
+      <svg
+        className={classes.icon}
+        width={iconSize}
+        height={iconSize}
+        fill="currentColor"
+      >
         <use href={iconShape} />
       </svg>
     </button>
