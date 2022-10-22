@@ -23,34 +23,7 @@
 }
 
 .button {
-  position: relative;
-  z-index: 100;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 3rem; /* 48px */
-  height: 3rem; /* 48px */
-  cursor: pointer;
-}
-
-.openButton {
-  composes: button;
   margin-right: -0.25rem; /* -4px */
-}
-
-.closeButton {
-  composes: button;
-  margin-right: -0.5rem; /* -8px */
-}
-
-.openButton > .buttonIcon {
-  width: 2.5rem; /* 40px */
-  height: 2.5rem; /* 40px */
-}
-
-.closeButton > .buttonIcon {
-  width: 2rem; /* 32px */
-  height: 2rem; /* 32px */
 }
 
 .navigation {

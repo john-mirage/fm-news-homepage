@@ -1,28 +1,25 @@
 import Navigation from "@components/Navigation";
+import IconButton from "@components/IconButton";
 import classes from "./Header.module.css";
 
 interface Props {
-  sidebarIsOpen: boolean;
-  toggleSidebar: () => void;
+  openSidebar: () => void;
 }
 
-const Header = ({ sidebarIsOpen, toggleSidebar }: Props) => {
+const Header = ({ openSidebar }: Props) => {
   return (
     <header className={classes.container}>
       <h1 className={classes.title}>News homepage</h1>
       <svg className={classes.logo} aria-hidden="true">
         <use href="#logo" />
       </svg>
-      <button
-        className={sidebarIsOpen ? classes.closeButton : classes.openButton}
-        type="button"
-        aria-label="open navigation menu"
-        onClick={toggleSidebar}
-      >
-        <svg className={classes.buttonIcon}>
-          <use href={`#icon-${sidebarIsOpen ? "menu-close" : "menu"}`} />
-        </svg>
-      </button>
+      <IconButton
+        className={classes.button}
+        label="open the sidebar"
+        iconShape="#icon-open-sidebar"
+        iconSize="2.5rem"
+        onClick={openSidebar}
+      />
       <Navigation className={classes.navigation} direction="row" />
     </header>
   );

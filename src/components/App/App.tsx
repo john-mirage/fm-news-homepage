@@ -1,27 +1,40 @@
 import FeaturedArticle from "@components/FeaturedArticle";
 import Header from "@components/Header";
 import LatestArticleList from "@components/LatestArticleList";
+import Overlay from "@components/Overlay";
 import PopularArticleList from "@components/PopularArticleList";
 import Sidebar from "@components/Sidebar";
 import { useState } from "react";
 import classes from "./App.module.css";
+import { AnimatePresence } from "framer-motion";
 
 const App = () => {
   const [sidebarIsOpen, setSidebarIsOpen] = useState<boolean>(false);
 
-  const toggleSidebar = () => {
-    setSidebarIsOpen(!sidebarIsOpen);
+  const openSidebar = () => {
+    if (!sidebarIsOpen) setSidebarIsOpen(true);
+  };
+
+  const closeSidebar = () => {
+    if (sidebarIsOpen) setSidebarIsOpen(false);
   };
 
   return (
     <div className={classes.container}>
-      <Header sidebarIsOpen={sidebarIsOpen} toggleSidebar={toggleSidebar} />
+      <Header openSidebar={openSidebar} />
       <main className={classes.main}>
         <FeaturedArticle />
         <LatestArticleList />
         <PopularArticleList />
       </main>
-      {sidebarIsOpen && <Sidebar />}
+      <AnimatePresence>
+        {sidebarIsOpen && (
+          <>
+            <Overlay closeSidebar={closeSidebar} />
+            <Sidebar closeSidebar={closeSidebar} />
+          </>
+        )}
+      </AnimatePresence>
     </div>
   );
 };
