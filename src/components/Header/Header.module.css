@@ -33,9 +33,29 @@
   align-items: center;
   width: 3rem; /* 48px */
   height: 3rem; /* 48px */
+  cursor: pointer;
 }
 
 .buttonIcon {
   width: 2.5rem; /* 40px */
   height: 2.5rem; /* 40px */
+}
+
+.buttonCloseIcon {
+  width: 2rem; /* 32px */
+  height: 2rem; /* 32px */
+}
+
+.navigation {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .button {
+    display: none;
+  }
+
+  .navigation {
+    display: block;
+  }
 }

@@ -1,3 +1,4 @@
+import Navigation from "@components/Navigation";
 import classes from "./Header.module.css";
 
 interface Props {
@@ -18,10 +19,15 @@ const Header = ({ sidebarIsOpen, toggleSidebar }: Props) => {
         aria-label="open navigation menu"
         onClick={toggleSidebar}
       >
-        <svg className={classes.buttonIcon}>
+        <svg
+          className={
+            sidebarIsOpen ? classes.buttonCloseIcon : classes.buttonIcon
+          }
+        >
           <use href={`#icon-${sidebarIsOpen ? "menu-close" : "menu"}`} />
         </svg>
       </button>
+      <Navigation className={classes.navigation} direction="row" />
     </header>
   );
 };

@@ -14,7 +14,7 @@ const App = () => {
   };
 
   return (
-    <>
+    <div className={classes.container}>
       <Header sidebarIsOpen={sidebarIsOpen} toggleSidebar={toggleSidebar} />
       <main className={classes.main}>
         <FeaturedArticle />
@@ -22,7 +22,7 @@ const App = () => {
         <PopularArticleList />
       </main>
       {sidebarIsOpen && <Sidebar />}
-    </>
+    </div>
   );
 };
 

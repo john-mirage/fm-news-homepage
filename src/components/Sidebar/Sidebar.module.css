@@ -14,5 +14,14 @@
 .surface {
   width: 16rem; /* 256px */
   height: 100%;
+  padding-left: 1.5rem; /* 24px */
+  padding-right: 1.5rem; /* 24px */
+  padding-top: 9rem; /* 144px */
   background-color: var(--color-almost-white);
+}
+
+@media screen and (min-width: 768px) {
+  .overlay {
+    display: none;
+  }
 }

@@ -1,0 +1,46 @@
+.list {
+  display: flex;
+}
+
+.rowList {
+  composes: list;
+  flex-direction: row;
+}
+
+.columnList {
+  composes: list;
+  flex-direction: column;
+}
+
+.rowList > .item {
+  margin-right: 2.5rem; /* 40px */
+}
+
+.columnList > .item {
+  margin-bottom: 1.5rem; /* 24px */
+}
+
+.rowList > .item:last-child {
+  margin-right: 0;
+}
+
+.columnList > .item:last-child {
+  margin-bottom: 0;
+}
+
+.link {
+  display: block;
+  font-weight: 400;
+}
+
+.columnList > .item > .link {
+  font-size: 1.125rem; /* 18px */
+  line-height: 1.5rem; /* 24px */
+  color: var(--color-dark-space-blue);
+}
+
+.rowList > .item > .link {
+  font-size: 0.9375rem; /* 15px */
+  line-height: 1.625rem; /* 26px */
+  color: var(--color-gunmetal);
+}
