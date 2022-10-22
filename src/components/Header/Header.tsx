@@ -14,16 +14,12 @@ const Header = ({ sidebarIsOpen, toggleSidebar }: Props) => {
         <use href="#logo" />
       </svg>
       <button
-        className={classes.button}
+        className={sidebarIsOpen ? classes.closeButton : classes.openButton}
         type="button"
         aria-label="open navigation menu"
         onClick={toggleSidebar}
       >
-        <svg
-          className={
-            sidebarIsOpen ? classes.buttonCloseIcon : classes.buttonIcon
-          }
-        >
+        <svg className={classes.buttonIcon}>
           <use href={`#icon-${sidebarIsOpen ? "menu-close" : "menu"}`} />
         </svg>
       </button>
