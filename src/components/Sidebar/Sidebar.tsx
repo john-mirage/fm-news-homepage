@@ -27,7 +27,7 @@ const Sidebar = ({ closeSidebar }: Props) => {
         iconSize="2rem"
         onClick={closeSidebar}
       />
-      <Navigation />
+      <Navigation wantFocus={true} />
     </motion.aside>
   );
 };
