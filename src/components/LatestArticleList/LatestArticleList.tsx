@@ -28,6 +28,7 @@ const LatestArticleList = () => {
       <ul className={classes.list}>
         {latestArticles.map((latestArticle) => (
           <LatestArticle
+            key={latestArticle.name}
             link={latestArticle.link}
             name={latestArticle.name}
             excerpt={latestArticle.excerpt}
