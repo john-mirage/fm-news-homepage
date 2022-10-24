@@ -43,6 +43,16 @@
     padding-left: 3rem; /* 48px */
     padding-right: 3rem; /* 48px */
   }
+
+  .secondaryContent {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem; /* 32px */
+  }
+
+  .latestArticles {
+    margin-bottom: 0;
+  }
 }
 
 @media screen and (min-width: 1206px) {

@@ -3,12 +3,17 @@ import retroPcsImage from "@images/image-retro-pcs.jpg";
 import topLaptopsImage from "@images/image-top-laptops.jpg";
 import gamingGrowthImage from "@images/image-gaming-growth.jpg";
 import PopularArticle from "@components/PopularArticle";
+import { clsx } from "clsx";
 
 interface PopularArticle {
   image: AppData.ImageWithPlaceholder;
   link: string;
   name: string;
   excerpt: string;
+}
+
+interface Props {
+  className?: string;
 }
 
 const popularArticles: PopularArticle[] = [
@@ -56,9 +61,9 @@ const popularArticles: PopularArticle[] = [
   },
 ];
 
-const PopularArticleList = () => {
+const PopularArticleList = ({ className = "" }: Props) => {
   return (
-    <section className={classes.container}>
+    <section className={clsx(className, classes.container)}>
       <h2 className={classes.title}>Popular articles</h2>
       <ul className={classes.list}>
         {popularArticles.map((popularArticle) => (

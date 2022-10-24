@@ -12,6 +12,7 @@
 
 .list {
   display: grid;
+  grid-template-columns: 1fr;
   gap: 2rem; /* 32px */
   counter-reset: standing;
 }
@@ -23,5 +24,18 @@
 @media screen and (min-width: 768px) {
   .list {
     grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .list {
+    grid-template-columns: 1fr;
+    gap: 2.5rem; /* 40px */
+  }
+}
+
+@media screen and (min-width: 1206px) {
+  .list {
+    grid-template-columns: repeat(3, 1fr);
   }
 }

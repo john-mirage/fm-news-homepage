@@ -45,8 +45,10 @@ const App = () => {
         <Header className={classes.header} openSidebar={openSidebar} />
         <main className={classes.main}>
           <FeaturedArticle className={classes.featuredArticle} />
-          <LatestArticleList className={classes.latestArticles} />
-          <PopularArticleList />
+          <div className={classes.secondaryContent}>
+            <LatestArticleList className={classes.latestArticles} />
+            <PopularArticleList className={classes.popularArticles} />
+          </div>
         </main>
         <AnimatePresence>
           {sidebarIsOpen && (
