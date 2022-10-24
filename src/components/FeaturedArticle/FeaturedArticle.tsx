@@ -3,6 +3,7 @@ import classes from "./FeaturedArticle.module.css";
 import mobileArticleImage from "@images/image-web-3-mobile.jpg";
 import desktopArticleImage from "@images/image-web-3-desktop.jpg";
 import { useMemo } from "react";
+import Button from "@components/Button";
 
 interface Props {
   className?: string;
@@ -48,7 +49,9 @@ const FeaturedArticle = ({ className }: Props) => {
           power of the platforms back into the hands of the people. But is it
           really fulfilling its promise?
         </p>
-        <button className={classes.button}>read more</button>
+        <Button className={classes.button} type="button">
+          read more
+        </Button>
       </article>
     </section>
   );

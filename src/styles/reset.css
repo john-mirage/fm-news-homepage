@@ -65,3 +65,7 @@ input,
 textarea {
   outline: none;
 }
+
+button {
+  cursor: pointer;
+}

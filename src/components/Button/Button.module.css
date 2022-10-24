@@ -1,0 +1,24 @@
+.container {
+  min-height: 3rem; /* 48px */
+  padding-left: 2rem; /* 32px */
+  padding-right: 2rem; /* 32px */
+  background-color: var(--color-light-vermillion);
+  font-size: 0.875rem; /* 14px */
+  font-weight: 700;
+  line-height: 1.5rem; /* 24px */
+  letter-spacing: 0.2737rem; /* 4.38px */
+  text-transform: uppercase;
+  color: var(--color-almost-white);
+  transition: background-color 150ms;
+}
+
+.container:focus-visible {
+  outline: 0.25rem solid var(--color-dark-space-blue);
+  outline-offset: 0.5rem; /* 8px */
+}
+
+@media screen and (hover: hover) {
+  .container:hover {
+    background-color: var(--color-dark-space-blue);
+  }
+}

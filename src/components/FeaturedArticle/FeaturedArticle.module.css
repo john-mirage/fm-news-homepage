@@ -31,19 +31,6 @@
   color: var(--color-gunmetal);
 }
 
-.button {
-  min-height: 3rem; /* 48px */
-  padding-left: 2rem; /* 32px */
-  padding-right: 2rem; /* 32px */
-  background-color: var(--color-light-vermillion);
-  font-size: 0.875rem; /* 14px */
-  font-weight: 700;
-  line-height: 1.5rem; /* 24px */
-  letter-spacing: 0.2737rem; /* 4.38px */
-  text-transform: uppercase;
-  color: var(--color-almost-white);
-}
-
 @media screen and (min-width: 768px) {
   .article {
     display: grid;
