@@ -74,7 +74,7 @@ const ImageWithPlaceholder = ({
           ))}
           <MotionImage
             ref={imageRef}
-            className={classes.picturImage}
+            className={classes.pictureImage}
             image={image}
             animate={controls}
             onAnimationComplete={() => {
