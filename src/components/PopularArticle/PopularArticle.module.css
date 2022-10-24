@@ -1,0 +1,41 @@
+.row {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+}
+
+.image {
+  margin-right: 1.5rem; /* 24px */
+  width: 6.25rem; /* 100px */
+  height: auto;
+  flex: none;
+}
+
+.text {
+  flex: 1;
+}
+
+.text::before {
+  margin-bottom: 0.75rem; /* 12px */
+  display: block;
+  content: counter(standing);
+  font-size: 2rem; /* 32px */
+  font-weight: 700;
+  line-height: 2rem; /* 32px */
+  color: var(--color-silver);
+}
+
+.name {
+  margin-bottom: 0.5rem; /* 8px */
+  font-size: 1.125rem; /* 18px */
+  font-weight: 800;
+  line-height: 1.5rem; /* 24px */
+  color: var(--color-dark-space-blue);
+}
+
+.excerpt {
+  font-size: 0.9375rem; /* 15px */
+  font-weight: 400;
+  line-height: 1.625rem; /* 26px */
+  color: var(--color-gunmetal);
+}

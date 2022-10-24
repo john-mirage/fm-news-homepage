@@ -64,6 +64,7 @@ const PopularArticleList = () => {
         {popularArticles.map((popularArticle) => (
           <PopularArticle
             key={popularArticle.name}
+            className={classes.listItem}
             image={popularArticle.image}
             link={popularArticle.link}
             name={popularArticle.name}

@@ -2,15 +2,22 @@ import ImageWithPlaceholder from "@components/ImageWithPlaceholder";
 import classes from "./PopularArticle.module.css";
 
 interface Props {
+  className?: string;
   image: AppData.ImageWithPlaceholder;
   link: string;
   name: string;
   excerpt: string;
 }
 
-const PopularArticle = ({ image, link, name, excerpt }: Props) => {
+const PopularArticle = ({
+  className = "",
+  image,
+  link,
+  name,
+  excerpt,
+}: Props) => {
   return (
-    <li className={classes.container}>
+    <li className={className}>
       <article className={classes.row}>
         <ImageWithPlaceholder
           className={classes.image}
