@@ -1,4 +1,4 @@
-import Image from "@components/Image";
+import Picture from "@components/Picture";
 import classes from "./FeaturedArticle.module.css";
 import mobileArticleImage from "@images/image-web-3-mobile.jpg";
 import desktopArticleImage from "@images/image-web-3-desktop.jpg";
@@ -13,8 +13,9 @@ const FeaturedArticle = () => {
   }, []);
 
   return (
-    <article>
-      <Image
+    <article className={classes.container}>
+      <Picture
+        className={classes.image}
         placeholderHash={blurHash}
         image={{
           src: mobileArticleImage,
@@ -33,6 +34,13 @@ const FeaturedArticle = () => {
           },
         ]}
       />
+      <h2 className={classes.title}>The Bright Future of Web 3.0?</h2>
+      <p className={classes.excerpt}>
+        We dive into the next evolution of the web that claims to put the power
+        of the platforms back into the hands of the people. But is it really
+        fulfilling its promise?
+      </p>
+      <button className={classes.button}>read more</button>
     </article>
   );
 };

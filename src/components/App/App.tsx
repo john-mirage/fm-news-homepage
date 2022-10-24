@@ -42,7 +42,7 @@ const App = () => {
   return (
     <MotionConfig reducedMotion="user">
       <div className={classes.container}>
-        <Header openSidebar={openSidebar} />
+        <Header className={classes.header} openSidebar={openSidebar} />
         <main className={classes.main}>
           <FeaturedArticle />
           <LatestArticleList />

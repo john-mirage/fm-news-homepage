@@ -6,6 +6,10 @@
   padding-right: 1rem; /* 16px */
 }
 
+.header {
+  margin-bottom: 0.25rem; /* 4px */
+}
+
 .main {
   display: flex;
   flex-direction: column;

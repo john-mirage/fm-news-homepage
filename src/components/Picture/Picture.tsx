@@ -1,7 +1,8 @@
 import { useCallback, useState } from "react";
 import { Blurhash } from "react-blurhash";
-import classes from "./Image.module.css";
+import classes from "./Picture.module.css";
 import { motion, useAnimation } from "framer-motion";
+import { clsx } from "clsx";
 
 interface Image {
   src: string;
@@ -20,12 +21,18 @@ interface Source {
 }
 
 interface Props {
+  className?: string;
   placeholderHash: string;
   image: Image;
   sources: Source[];
 }
 
-const Image = ({ placeholderHash, image, sources }: Props) => {
+const Picture = ({
+  className = "",
+  placeholderHash,
+  image,
+  sources,
+}: Props) => {
   const [isLoaded, setIsLoaded] = useState<boolean>(false);
   const controls = useAnimation();
 
@@ -45,7 +52,7 @@ const Image = ({ placeholderHash, image, sources }: Props) => {
   }, []);
 
   return (
-    <div className={classes.container}>
+    <div className={clsx(className, classes.container)}>
       {!isLoaded && (
         <div className={classes.placeholder}>
           <Blurhash hash={placeholderHash} width="100%" height="100%" />
@@ -81,4 +88,4 @@ const Image = ({ placeholderHash, image, sources }: Props) => {
   );
 };
 
-export default Image;
+export default Picture;

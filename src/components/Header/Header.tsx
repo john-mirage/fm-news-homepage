@@ -1,14 +1,16 @@
 import Navigation from "@components/Navigation";
 import IconButton from "@components/IconButton";
 import classes from "./Header.module.css";
+import { clsx } from "clsx";
 
 interface Props {
+  className?: string;
   openSidebar: () => void;
 }
 
-const Header = ({ openSidebar }: Props) => {
+const Header = ({ className = "", openSidebar }: Props) => {
   return (
-    <header className={classes.container}>
+    <header className={clsx(className, classes.container)}>
       <h1 className={classes.title}>News homepage</h1>
       <svg className={classes.logo} aria-hidden="true">
         <use href="#logo" />
