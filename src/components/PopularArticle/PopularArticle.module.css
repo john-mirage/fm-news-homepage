@@ -19,7 +19,7 @@
 .text::before {
   margin-bottom: 0.75rem; /* 12px */
   display: block;
-  content: counter(standing);
+  content: "0" counter(standing);
   font-size: 2rem; /* 32px */
   font-weight: 700;
   line-height: 2rem; /* 32px */
