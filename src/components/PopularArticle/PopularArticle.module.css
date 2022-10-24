@@ -26,12 +26,18 @@
   color: var(--color-silver);
 }
 
+.link {
+  display: block;
+  max-width: max-content;
+}
+
 .name {
   margin-bottom: 0.5rem; /* 8px */
   font-size: 1.125rem; /* 18px */
   font-weight: 800;
   line-height: 1.5rem; /* 24px */
   color: var(--color-dark-space-blue);
+  transition: color 150ms;
 }
 
 .excerpt {
@@ -39,4 +45,10 @@
   font-weight: 400;
   line-height: 1.625rem; /* 26px */
   color: var(--color-gunmetal);
+}
+
+@media screen and (hover: hover) {
+  .link:hover > .name {
+    color: var(--color-light-vermillion);
+  }
 }

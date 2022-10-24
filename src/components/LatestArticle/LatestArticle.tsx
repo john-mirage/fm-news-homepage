@@ -10,7 +10,7 @@ const LatestArticle = ({ link, name, excerpt }: Props) => {
   return (
     <li className={classes.container}>
       <article>
-        <a href={link}>
+        <a className={classes.link} href={link}>
           <h3 className={classes.name}>{name}</h3>
         </a>
         <p className={classes.excerpt}>{excerpt}</p>

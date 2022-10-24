@@ -25,7 +25,7 @@ const PopularArticle = ({
           image={image}
         />
         <div className={classes.text}>
-          <a href={link}>
+          <a className={classes.link} href={link}>
             <h3 className={classes.name}>{name}</h3>
           </a>
           <p className={classes.excerpt}>{excerpt}</p>

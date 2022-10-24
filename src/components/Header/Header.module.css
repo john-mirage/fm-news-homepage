@@ -31,6 +31,11 @@
 }
 
 @media screen and (min-width: 768px) {
+  .logo {
+    width: 4rem; /* 64px */
+    height: 2.5rem; /* 40px */
+  }
+
   .button {
     display: none;
   }

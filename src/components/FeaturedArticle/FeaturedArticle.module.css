@@ -74,6 +74,13 @@
   }
 }
 
+@media screen and (min-width: 992px) {
+  .name {
+    font-size: 3.5rem; /* 56px */
+    line-height: 3.5rem; /* 56px */
+  }
+}
+
 @media screen and (min-width: 1206px) {
   .article {
     grid-template:
@@ -81,5 +88,9 @@
       "name excerpt" auto
       "name button" 1fr / 1fr 1fr;
     gap: 1.875rem; /* 30px */
+  }
+
+  .excerpt {
+    margin-bottom: 0;
   }
 }
