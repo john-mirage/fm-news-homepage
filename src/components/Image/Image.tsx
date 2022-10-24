@@ -20,12 +20,12 @@ interface Source {
 }
 
 interface Props {
-  blurHash: string;
+  placeholderHash: string;
   image: Image;
   sources: Source[];
 }
 
-const Image = ({ blurHash, image, sources }: Props) => {
+const Image = ({ placeholderHash, image, sources }: Props) => {
   const [isLoaded, setIsLoaded] = useState<boolean>(false);
   const controls = useAnimation();
 
@@ -48,7 +48,7 @@ const Image = ({ blurHash, image, sources }: Props) => {
     <div className={classes.container}>
       {!isLoaded && (
         <div className={classes.placeholder}>
-          <Blurhash hash={blurHash} width="100%" height="100%" />
+          <Blurhash hash={placeholderHash} width="100%" height="100%" />
         </div>
       )}
       <picture className={classes.picture}>

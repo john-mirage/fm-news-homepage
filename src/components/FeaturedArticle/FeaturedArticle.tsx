@@ -2,12 +2,20 @@ import Image from "@components/Image";
 import classes from "./FeaturedArticle.module.css";
 import mobileArticleImage from "@images/image-web-3-mobile.jpg";
 import desktopArticleImage from "@images/image-web-3-desktop.jpg";
+import { useMemo } from "react";
 
 const FeaturedArticle = () => {
+  const blurHash = useMemo(() => {
+    const isDesktop = window.matchMedia("(min-width: 992px)").matches;
+    return isDesktop
+      ? "LRH,SsGZ}h|mpbRpv}5=?DxZoyw~"
+      : "LNHv=CKk}O-1WZK4wZnMyAV}oOE,";
+  }, []);
+
   return (
     <article>
       <Image
-        blurHash="LNHv=CKk}O-1WZK4wZnMyAV}oOE,"
+        placeholderHash={blurHash}
         image={{
           src: mobileArticleImage,
           alt: "Web 3.0 illustration",
