@@ -5,27 +5,11 @@ import { motion, useAnimation } from "framer-motion";
 import { clsx } from "clsx";
 import ImageComponent from "@components/Image";
 
-interface Image {
-  src: string;
-  alt: string;
-  width: string;
-  height: string;
-  loading: "eager" | "lazy" | undefined;
-  decoding: "async" | "auto" | "sync" | undefined;
-}
-
-interface Source {
-  srcSet: string;
-  media: string;
-  width: string;
-  height: string;
-}
-
 interface Props {
   className?: string;
   placeholderHash: string;
-  image: Image;
-  sources?: Source[];
+  image: AppData.Image;
+  sources?: AppData.Source[];
 }
 
 const MotionImage = motion(ImageComponent);

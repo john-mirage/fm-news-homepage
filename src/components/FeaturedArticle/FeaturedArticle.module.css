@@ -1,12 +1,20 @@
-.container {
-  margin-bottom: 4rem; /* 64px */
+.title {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
 }
 
 .image {
   margin-bottom: 1.5rem; /* 24px */
 }
 
-.title {
+.name {
   margin-bottom: 1rem; /* 16px */
   font-size: 2.5rem; /* 40px */
   font-weight: 800;

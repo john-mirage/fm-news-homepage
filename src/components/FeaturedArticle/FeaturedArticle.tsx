@@ -4,7 +4,11 @@ import mobileArticleImage from "@images/image-web-3-mobile.jpg";
 import desktopArticleImage from "@images/image-web-3-desktop.jpg";
 import { useMemo } from "react";
 
-const FeaturedArticle = () => {
+interface Props {
+  className?: string;
+}
+
+const FeaturedArticle = ({ className }: Props) => {
   const blurHash = useMemo(() => {
     const isDesktop = window.matchMedia("(min-width: 992px)").matches;
     return isDesktop
@@ -13,35 +17,38 @@ const FeaturedArticle = () => {
   }, []);
 
   return (
-    <article className={classes.container}>
-      <ImageWithPlaceholder
-        className={classes.image}
-        placeholderHash={blurHash}
-        image={{
-          src: mobileArticleImage,
-          alt: "Web 3.0 illustration",
-          width: "686",
-          height: "600",
-          loading: "eager",
-          decoding: "async",
-        }}
-        sources={[
-          {
-            srcSet: desktopArticleImage,
-            media: "(min-width: 992px)",
-            width: "1460",
+    <section className={className}>
+      <h2 className={classes.title}>Featured article</h2>
+      <article>
+        <ImageWithPlaceholder
+          className={classes.image}
+          placeholderHash={blurHash}
+          image={{
+            src: mobileArticleImage,
+            alt: "Web 3.0 illustration",
+            width: "686",
             height: "600",
-          },
-        ]}
-      />
-      <h2 className={classes.title}>The Bright Future of Web 3.0?</h2>
-      <p className={classes.excerpt}>
-        We dive into the next evolution of the web that claims to put the power
-        of the platforms back into the hands of the people. But is it really
-        fulfilling its promise?
-      </p>
-      <button className={classes.button}>read more</button>
-    </article>
+            loading: "eager",
+            decoding: "async",
+          }}
+          sources={[
+            {
+              srcSet: desktopArticleImage,
+              media: "(min-width: 992px)",
+              width: "1460",
+              height: "600",
+            },
+          ]}
+        />
+        <h3 className={classes.name}>The Bright Future of Web 3.0?</h3>
+        <p className={classes.excerpt}>
+          We dive into the next evolution of the web that claims to put the
+          power of the platforms back into the hands of the people. But is it
+          really fulfilling its promise?
+        </p>
+        <button className={classes.button}>read more</button>
+      </article>
+    </section>
   );
 };
 

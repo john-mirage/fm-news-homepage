@@ -1,17 +1,8 @@
 import { forwardRef } from "react";
 
-interface Image {
-  src: string;
-  alt: string;
-  width: string;
-  height: string;
-  loading: "eager" | "lazy" | undefined;
-  decoding: "async" | "auto" | "sync" | undefined;
-}
-
 interface Props {
   className?: string;
-  image: Image;
+  image: AppData.Image;
 }
 
 const Image = forwardRef<HTMLImageElement, Props>(

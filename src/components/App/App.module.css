@@ -16,6 +16,10 @@
   flex-direction: column;
 }
 
+.featuredArticle {
+  margin-bottom: 4rem; /* 64px */
+}
+
 .latestArticles {
   margin-bottom: 4rem; /* 64px */
 }
