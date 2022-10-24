@@ -14,24 +14,13 @@
   display: grid;
   grid-template-columns: 1fr;
   gap: 2rem; /* 32px */
+  height: 100%;
   counter-reset: standing;
 }
 
 .listItem {
+  height: 100%;
   counter-increment: standing;
-}
-
-@media screen and (min-width: 768px) {
-  .list {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media screen and (min-width: 992px) {
-  .list {
-    grid-template-columns: 1fr;
-    gap: 2.5rem; /* 40px */
-  }
 }
 
 @media screen and (min-width: 1206px) {

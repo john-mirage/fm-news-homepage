@@ -11,11 +11,6 @@
   margin-bottom: 0.25rem; /* 4px */
 }
 
-.main {
-  display: flex;
-  flex-direction: column;
-}
-
 .featuredArticle {
   margin-bottom: 4rem; /* 64px */
 }
@@ -34,6 +29,33 @@
 @media screen and (min-width: 768px) {
   .container {
     max-width: 768px;
+    padding-top: 4rem; /* 64px */
+  }
+
+  .header {
+    margin-bottom: 2rem; /* 32px */
+  }
+
+  .main {
+    display: grid;
+    grid-template-areas:
+      "featured featured"
+      "latest   popular";
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.875rem; /* 30px */
+  }
+
+  .featuredArticle {
+    grid-area: featured;
+  }
+
+  .latestArticles {
+    grid-area: latest;
+    margin-bottom: 0;
+  }
+
+  .popularArticles {
+    grid-area: popular;
   }
 }
 
@@ -43,20 +65,22 @@
     padding-left: 3rem; /* 48px */
     padding-right: 3rem; /* 48px */
   }
-
-  .secondaryContent {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2rem; /* 32px */
-  }
-
-  .latestArticles {
-    margin-bottom: 0;
-  }
 }
 
 @media screen and (min-width: 1206px) {
   .container {
     max-width: 1206px;
+  }
+
+  .main {
+    grid-template-areas:
+      "featured latest"
+      "popular popular";
+    grid-template-columns: 1fr 350px;
+    gap: 4.5rem 1.875rem; /* 72px 30px */
+  }
+
+  .featuredArticle {
+    margin-bottom: 0;
   }
 }

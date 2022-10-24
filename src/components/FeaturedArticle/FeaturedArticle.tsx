@@ -8,9 +8,11 @@ interface Props {
   className?: string;
 }
 
+const DESKTOP_MQ = "(min-width: 1206px)";
+
 const FeaturedArticle = ({ className }: Props) => {
   const blurHash = useMemo(() => {
-    const isDesktop = window.matchMedia("(min-width: 992px)").matches;
+    const isDesktop = window.matchMedia(DESKTOP_MQ).matches;
     return isDesktop
       ? "LRH,SsGZ}h|mpbRpv}5=?DxZoyw~"
       : "LNHv=CKk}O-1WZK4wZnMyAV}oOE,";
@@ -19,7 +21,7 @@ const FeaturedArticle = ({ className }: Props) => {
   return (
     <section className={className}>
       <h2 className={classes.title}>Featured article</h2>
-      <article>
+      <article className={classes.article}>
         <ImageWithPlaceholder
           className={classes.image}
           placeholderHash={blurHash}
@@ -34,7 +36,7 @@ const FeaturedArticle = ({ className }: Props) => {
           sources={[
             {
               srcSet: desktopArticleImage,
-              media: "(min-width: 992px)",
+              media: DESKTOP_MQ,
               width: "1460",
               height: "600",
             },

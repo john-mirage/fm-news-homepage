@@ -19,6 +19,7 @@
 }
 
 .excerpt {
+  max-width: 512px;
   font-size: 0.9375rem; /* 15px */
   font-weight: 400;
   line-height: 1.625rem; /* 26px */
