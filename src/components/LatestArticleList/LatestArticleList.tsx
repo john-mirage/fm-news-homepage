@@ -1,5 +1,10 @@
 import LatestArticle from "@components/LatestArticle";
 import classes from "./LatestArticleList.module.css";
+import { clsx } from "clsx";
+
+interface Props {
+  className?: string;
+}
 
 const latestArticles = [
   {
@@ -21,9 +26,9 @@ const latestArticles = [
   },
 ];
 
-const LatestArticleList = () => {
+const LatestArticleList = ({ className = "" }: Props) => {
   return (
-    <section className={classes.container}>
+    <section className={clsx(className, classes.container)}>
       <h2 className={classes.title}>New</h2>
       <ul className={classes.list}>
         {latestArticles.map((latestArticle) => (

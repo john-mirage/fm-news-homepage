@@ -45,7 +45,7 @@ const App = () => {
         <Header className={classes.header} openSidebar={openSidebar} />
         <main className={classes.main}>
           <FeaturedArticle />
-          <LatestArticleList />
+          <LatestArticleList className={classes.latestArticles} />
           <PopularArticleList />
         </main>
         <AnimatePresence>
