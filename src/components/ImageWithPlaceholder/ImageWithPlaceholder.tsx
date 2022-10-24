@@ -1,8 +1,9 @@
 import { useCallback, useState } from "react";
 import { Blurhash } from "react-blurhash";
-import classes from "./Picture.module.css";
+import classes from "./ImageWithPlaceholder.module.css";
 import { motion, useAnimation } from "framer-motion";
 import { clsx } from "clsx";
+import ImageComponent from "@components/Image";
 
 interface Image {
   src: string;
@@ -24,10 +25,12 @@ interface Props {
   className?: string;
   placeholderHash: string;
   image: Image;
-  sources: Source[];
+  sources?: Source[];
 }
 
-const Picture = ({
+const MotionImage = motion(ImageComponent);
+
+const ImageWithPlaceholder = ({
   className = "",
   placeholderHash,
   image,
@@ -58,34 +61,40 @@ const Picture = ({
           <Blurhash hash={placeholderHash} width="100%" height="100%" />
         </div>
       )}
-      <picture className={classes.picture}>
-        {sources.map((source) => (
-          <source
-            key={source.srcSet}
-            srcSet={source.srcSet}
-            media={source.media}
-            width={source.width}
-            height={source.height}
+      {sources ? (
+        <picture className={classes.picture}>
+          {sources.map((source) => (
+            <source
+              key={source.srcSet}
+              srcSet={source.srcSet}
+              media={source.media}
+              width={source.width}
+              height={source.height}
+            />
+          ))}
+          <MotionImage
+            ref={imageRef}
+            className={classes.picturImage}
+            image={image}
+            animate={controls}
+            onAnimationComplete={() => {
+              setIsLoaded(true);
+            }}
           />
-        ))}
-        <motion.img
+        </picture>
+      ) : (
+        <MotionImage
           ref={imageRef}
           className={classes.image}
-          src={image.src}
-          alt={image.alt}
-          width={image.width}
-          height={image.height}
-          loading={image.loading}
-          decoding={image.decoding}
-          draggable="false"
+          image={image}
           animate={controls}
           onAnimationComplete={() => {
             setIsLoaded(true);
           }}
         />
-      </picture>
+      )}
     </div>
   );
 };
 
-export default Picture;
+export default ImageWithPlaceholder;

@@ -1,4 +1,4 @@
-import Picture from "@components/Picture";
+import ImageWithPlaceholder from "@components/ImageWithPlaceholder";
 import classes from "./FeaturedArticle.module.css";
 import mobileArticleImage from "@images/image-web-3-mobile.jpg";
 import desktopArticleImage from "@images/image-web-3-desktop.jpg";
@@ -14,7 +14,7 @@ const FeaturedArticle = () => {
 
   return (
     <article className={classes.container}>
-      <Picture
+      <ImageWithPlaceholder
         className={classes.image}
         placeholderHash={blurHash}
         image={{
