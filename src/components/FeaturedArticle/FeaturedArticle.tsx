@@ -14,7 +14,7 @@ const FeaturedArticle = ({ className }: Props) => {
   const blurHash = useMemo(() => {
     const isDesktop = window.matchMedia(DESKTOP_MQ).matches;
     return isDesktop
-      ? featuredArticle.image.desktop.blueHash
+      ? featuredArticle.image.desktop.blurHash
       : featuredArticle.image.mobile.blurHash;
   }, []);
 

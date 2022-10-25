@@ -1,7 +1,7 @@
 [
   {
     "image": {
-      "placeholderHash": "LFB:wN1GkB^-H;n2$kInD4=fM_NF",
+      "blurHash": "LFB:wN1GkB^-H;n2$kInD4=fM_NF",
       "src": "/articles/image-retro-pcs.jpg",
       "alt": "old computer illustration",
       "width": "200",
@@ -15,7 +15,7 @@
   },
   {
     "image": {
-      "placeholderHash": "L19ZsIpK^R4-00Na0xGu0]=e^-zp",
+      "blurHash": "L19ZsIpK^R4-00Na0xGu0]=e^-zp",
       "src": "/articles/image-top-laptops.jpg",
       "alt": "laptop keyboard keys illustration",
       "width": "200",
@@ -29,7 +29,7 @@
   },
   {
     "image": {
-      "placeholderHash": "L3I#u]0000~W6L-;;vtSHXIo00w]",
+      "blurHash": "L3I#u]0000~W6L-;;vtSHXIo00w]",
       "src": "/articles/image-gaming-growth.jpg",
       "alt": "gamepad illustration",
       "width": "200",

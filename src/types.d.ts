@@ -4,12 +4,12 @@ namespace AppData {
     alt: string;
     width: string;
     height: string;
-    loading: "eager" | "lazy" | undefined;
-    decoding: "async" | "auto" | "sync" | undefined;
+    loading: string;
+    decoding: string;
   }
 
   interface ImageWithPlaceholder extends Image {
-    placeholderHash: string;
+    blurHash: string;
   }
 
   interface Source {

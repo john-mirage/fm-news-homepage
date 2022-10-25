@@ -21,7 +21,7 @@ const PopularArticle = ({
       <article className={classes.row}>
         <ImageWithPlaceholder
           className={classes.image}
-          placeholderHash={image.placeholderHash}
+          placeholderHash={image.blurHash}
           image={image}
         />
         <div className={classes.text}>

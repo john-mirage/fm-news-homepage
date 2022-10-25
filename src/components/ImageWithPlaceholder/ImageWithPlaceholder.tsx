@@ -1,9 +1,9 @@
+import ImageComponent from "@components/Image";
+import { clsx } from "clsx";
+import { motion, useAnimation } from "framer-motion";
 import { useCallback, useState } from "react";
 import { Blurhash } from "react-blurhash";
 import classes from "./ImageWithPlaceholder.module.css";
-import { motion, useAnimation } from "framer-motion";
-import { clsx } from "clsx";
-import ImageComponent from "@components/Image";
 
 interface Props {
   className?: string;
