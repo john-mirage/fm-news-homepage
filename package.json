@@ -11,7 +11,8 @@
     "stylelint": "npx stylelint '**/*.css'",
     "format": "npx prettier --write .",
     "coverage": "vitest run --coverage",
-    "test": "vitest",
+    "test:unit": "vitest",
+    "test:e2e": "npx playwright test",
     "test:ui": "vitest --ui"
   },
   "dependencies": {
@@ -24,9 +25,7 @@
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "@testing-library/jest-dom": "^5.16.5",
-    "@testing-library/react": "^13.4.0",
-    "@testing-library/user-event": "^14.4.3",
+    "@playwright/test": "^1.27.1",
     "@types/lodash": "^4.14.186",
     "@types/node": "^18.11.2",
     "@types/react": "^18.0.21",
@@ -38,7 +37,6 @@
     "autoprefixer": "^10.4.12",
     "eslint": "^8.25.0",
     "eslint-config-prettier": "^8.5.0",
-    "jsdom": "^20.0.1",
     "prettier": "^2.7.1",
     "stylelint": "^14.14.0",
     "stylelint-config-css-modules": "^4.1.0",

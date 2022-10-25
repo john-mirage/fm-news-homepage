@@ -16,18 +16,13 @@ export default defineConfig({
     alias: {
       "@components": resolve(__dirname, "src/components"),
       "@data": resolve(__dirname, "src/data"),
-      "@styles": resolve(__dirname, "src/styles"),
       "@images": resolve(__dirname, "src/images"),
-      "@test": resolve(__dirname, "src/test"),
-      "@utils": resolve(__dirname, "src/utils"),
+      "@styles": resolve(__dirname, "src/styles"),
+      "@tests": resolve(__dirname, "src/tests"),
     },
   },
   test: {
-    globals: true,
-    environment: "jsdom",
-    setupFiles: "./src/test/setup.ts",
-    // you might want to disable it, if you don't have tests that rely on CSS
-    // since parsing CSS is slow
-    //css: true,
+    testTimeout: 60_000,
+    hookTimeout: 60_000,
   },
 });
