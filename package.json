@@ -11,8 +11,7 @@
     "stylelint": "npx stylelint '**/*.css'",
     "format": "npx prettier --write .",
     "coverage": "vitest run --coverage",
-    "test:unit": "vitest",
-    "test:e2e": "npx playwright test",
+    "test": "vitest",
     "test:ui": "vitest --ui"
   },
   "dependencies": {
@@ -37,6 +36,7 @@
     "autoprefixer": "^10.4.12",
     "eslint": "^8.25.0",
     "eslint-config-prettier": "^8.5.0",
+    "playwright": "^1.27.1",
     "prettier": "^2.7.1",
     "stylelint": "^14.14.0",
     "stylelint-config-css-modules": "^4.1.0",
