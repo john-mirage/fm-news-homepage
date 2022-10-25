@@ -1,8 +1,8 @@
-import ImageWithPlaceholder from "@components/ImageWithPlaceholder";
-import classes from "./FeaturedArticle.module.css";
-import { useMemo } from "react";
 import Button from "@components/Button";
+import ImageWithPlaceholder from "@components/ImageWithPlaceholder";
 import featuredArticle from "@data/featured-article.json";
+import { useMemo } from "react";
+import classes from "./FeaturedArticle.module.css";
 
 interface Props {
   className?: string;

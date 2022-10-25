@@ -5,9 +5,9 @@ import Overlay from "@components/Overlay";
 import PopularArticleList from "@components/PopularArticleList";
 import Sidebar from "@components/Sidebar";
 import { AnimatePresence, MotionConfig } from "framer-motion";
+import { throttle } from "lodash";
 import { useEffect, useRef, useState } from "react";
 import classes from "./App.module.css";
-import { throttle } from "lodash";
 
 const App = () => {
   const [sidebarIsOpen, _setSidebarIsOpen] = useState<boolean>(false);

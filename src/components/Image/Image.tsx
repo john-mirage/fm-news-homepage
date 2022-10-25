@@ -6,7 +6,7 @@ interface Props {
 }
 
 const Image = forwardRef<HTMLImageElement, Props>(
-  ({ className = "", image }, ref) => {
+  ({ className, image }, ref) => {
     return (
       <img
         ref={ref}
@@ -15,8 +15,8 @@ const Image = forwardRef<HTMLImageElement, Props>(
         alt={image.alt}
         width={image.width}
         height={image.height}
-        loading={image.loading}
-        decoding={image.decoding}
+        loading={image.loading as "eager" | "lazy"}
+        decoding={image.decoding as "async" | "auto" | "sync"}
         draggable="false"
       />
     );

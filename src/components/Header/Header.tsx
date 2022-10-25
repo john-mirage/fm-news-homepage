@@ -1,14 +1,14 @@
-import Navigation from "@components/Navigation";
 import IconButton from "@components/IconButton";
-import classes from "./Header.module.css";
+import Navigation from "@components/Navigation";
 import { clsx } from "clsx";
+import classes from "./Header.module.css";
 
 interface Props {
   className?: string;
   openSidebar: () => void;
 }
 
-const Header = ({ className = "", openSidebar }: Props) => {
+const Header = ({ className, openSidebar }: Props) => {
   return (
     <header className={clsx(className, classes.container)}>
       <h1 className={classes.title}>News homepage</h1>

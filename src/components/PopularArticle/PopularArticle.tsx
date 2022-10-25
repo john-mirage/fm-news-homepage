@@ -9,13 +9,7 @@ interface Props {
   excerpt: string;
 }
 
-const PopularArticle = ({
-  className = "",
-  image,
-  link,
-  name,
-  excerpt,
-}: Props) => {
+const PopularArticle = ({ className, image, link, name, excerpt }: Props) => {
   return (
     <li className={className}>
       <article className={classes.row}>

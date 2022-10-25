@@ -1,7 +1,7 @@
-import classes from "./PopularArticleList.module.css";
 import PopularArticle from "@components/PopularArticle";
-import { clsx } from "clsx";
 import popularArticles from "@data/popular-articles.json";
+import { clsx } from "clsx";
+import classes from "./PopularArticleList.module.css";
 
 interface PopularArticle {
   image: AppData.ImageWithPlaceholder;
@@ -14,7 +14,7 @@ interface Props {
   className?: string;
 }
 
-const PopularArticleList = ({ className = "" }: Props) => {
+const PopularArticleList = ({ className }: Props) => {
   return (
     <section className={clsx(className, classes.container)}>
       <h2 className={classes.title}>Popular articles</h2>

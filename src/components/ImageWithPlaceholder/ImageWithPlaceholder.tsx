@@ -15,7 +15,7 @@ interface Props {
 const MotionImage = motion(ImageComponent);
 
 const ImageWithPlaceholder = ({
-  className = "",
+  className,
   placeholderHash,
   image,
   sources,

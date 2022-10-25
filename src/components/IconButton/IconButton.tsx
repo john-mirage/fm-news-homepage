@@ -1,5 +1,5 @@
-import classes from "./IconButton.module.css";
 import { clsx } from "clsx";
+import classes from "./IconButton.module.css";
 
 interface Props {
   className?: string;
@@ -10,7 +10,7 @@ interface Props {
 }
 
 const IconButton = ({
-  className = "",
+  className,
   label,
   iconShape,
   iconSize,

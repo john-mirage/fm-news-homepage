@@ -1,5 +1,5 @@
-import classes from "./Overlay.module.css";
 import { motion } from "framer-motion";
+import classes from "./Overlay.module.css";
 
 interface Props {
   closeSidebar: () => void;

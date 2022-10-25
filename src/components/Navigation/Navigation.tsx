@@ -1,7 +1,7 @@
-import classes from "./Navigation.module.css";
 import navigationItems from "@data/navigation.json";
 import { clsx } from "clsx";
 import { useEffect, useRef } from "react";
+import classes from "./Navigation.module.css";
 
 interface Props {
   className?: string;

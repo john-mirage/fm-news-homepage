@@ -1,7 +1,7 @@
-import Navigation from "@components/Navigation";
-import classes from "./Sidebar.module.css";
-import { motion } from "framer-motion";
 import IconButton from "@components/IconButton";
+import Navigation from "@components/Navigation";
+import { motion } from "framer-motion";
+import classes from "./Sidebar.module.css";
 
 interface Props {
   closeSidebar: () => void;
