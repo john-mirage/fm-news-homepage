@@ -1,5 +1,5 @@
 import classes from "./Navigation.module.css";
-import { navigationItems } from "@constants/navigation";
+import navigationItems from "@data/navigation.json";
 import { clsx } from "clsx";
 import { useEffect, useRef } from "react";
 
@@ -10,7 +10,7 @@ interface Props {
 }
 
 const Navigation = ({
-  className = "",
+  className,
   direction = "column",
   wantFocus = false,
 }: Props) => {

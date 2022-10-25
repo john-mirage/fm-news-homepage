@@ -1,0 +1,44 @@
+[
+  {
+    "image": {
+      "placeholderHash": "LFB:wN1GkB^-H;n2$kInD4=fM_NF",
+      "src": "/articles/image-retro-pcs.jpg",
+      "alt": "old computer illustration",
+      "width": "200",
+      "height": "254",
+      "loading": "lazy",
+      "decoding": "async"
+    },
+    "link": "#",
+    "name": "Reviving Retro PCs",
+    "excerpt": "What happens when old PCs are given modern upgrades?"
+  },
+  {
+    "image": {
+      "placeholderHash": "L19ZsIpK^R4-00Na0xGu0]=e^-zp",
+      "src": "/articles/image-top-laptops.jpg",
+      "alt": "laptop keyboard keys illustration",
+      "width": "200",
+      "height": "254",
+      "loading": "lazy",
+      "decoding": "async"
+    },
+    "link": "#",
+    "name": "Top 10 Laptops of 2022",
+    "excerpt": "Our best picks for various needs and budgets."
+  },
+  {
+    "image": {
+      "placeholderHash": "L3I#u]0000~W6L-;;vtSHXIo00w]",
+      "src": "/articles/image-gaming-growth.jpg",
+      "alt": "gamepad illustration",
+      "width": "200",
+      "height": "254",
+      "loading": "lazy",
+      "decoding": "async"
+    },
+    "link": "#",
+    "name": "The Growth of Gaming",
+    "excerpt": "How the pandemic has sparked fresh opportunities."
+  }
+]
