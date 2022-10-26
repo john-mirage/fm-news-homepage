@@ -10,7 +10,10 @@ interface Props {
 const LatestArticleList = ({ className }: Props) => {
   return (
     <section className={clsx(className, classes.container)}>
-      <h2 className={classes.title}>New</h2>
+      <h2 className={classes.srTitle}>Latest articles</h2>
+      <div className={classes.visualTitle} aria-hidden="true">
+        New
+      </div>
       <ul className={classes.list}>
         {latestArticles.map((latestArticle) => (
           <LatestArticle
