@@ -77,6 +77,10 @@
     gap: 1.875rem; /* 30px */
   }
 
+  .name {
+    margin-bottom: 0;
+  }
+
   .excerpt {
     margin-bottom: 0;
   }

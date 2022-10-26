@@ -41,6 +41,7 @@
   }
 
   .navigation {
+    margin-top: 0.25rem; /* 4px */
     display: block;
   }
 }
