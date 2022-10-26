@@ -77,6 +77,10 @@
     gap: 1.875rem; /* 30px */
   }
 
+  .image {
+    height: 18.75rem; /* 300px */
+  }
+
   .name {
     margin-bottom: 0;
   }
